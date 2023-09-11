@@ -1,0 +1,297 @@
+/* Global styles */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+  --base-font: 'Mulish', sans-serif;
+  
+  --accent-text-color: hsla(320, 69%, 42%, 1);
+  --text-base-color: hsla(244, 38%, 28%, 1);
+  --backgroud-color-page: hsla(283, 47%, 97%, 1);
+  --backgroud-color-cards: linear-gradient(96.21deg, #343193 0%, #302C63 99.68%);
+  --color-base-white: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: var(--base-font);
+  background-color: var(--backgroud-color-page);
+  max-width: 43rem;
+  margin-inline: auto;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+h1{
+  font-size: 3.2rem;
+  line-height: 4rem;
+  color: var(--accent-text-color);
+  font-weight: 900;
+  text-align: center;
+}
+
+h2 {
+  font-size: 3.2rem;
+  color: var(--accent-text-color);
+  font-weight: 900;
+}
+
+h3 {
+  font-size: 3rem;
+  line-height: 3.6rem;
+  color: var(--accent-text-color);
+  font-weight: 900;
+  margin-top: 3.3rem;
+  padding-bottom: 1.9rem;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 600;
+  color: var(--text-base-color);
+}
+
+#contact .input-wrapper input, textarea {
+  border: 1.5px solid var(--text-base-color);
+  border-radius: 1.5rem;
+}
+
+#contact .input-wrapper input::placeholder, textarea::placeholder {
+  font-family: var(--base-font);
+  color: var(--text-base-color);
+  font-weight: 600;
+}
+
+/* Hero section */
+
+#hero{
+  padding: 0 3.4rem 9.3rem 3.2rem;
+}
+
+#hero .hero-text p {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.astronaut {
+  padding-bottom: 1.7rem;
+}
+
+#hero .hero-text .button-down {
+  width: 5.8rem;
+  height: 10.5rem;
+  display: block;
+  margin: 0 auto;
+}
+
+#hero .hero-text .button-down:hover {
+  filter: brightness(0.7);
+  transition: filter 300ms;
+}
+
+/* Estilização dos cards  */
+
+#cards {
+  background: var(--backgroud-color-cards);
+  padding: 5.3rem 3.9rem 5.5rem;
+  display: grid;
+  gap: 4.9rem;
+}
+
+#cards .card {
+  background: var(--color-base-white);
+  padding: 2.6rem;
+  border-radius: 2rem;
+} 
+
+#cards .card img {
+  width: 8rem;
+}
+
+/* Style Forms */
+
+#contact h2 {
+  margin-bottom: 4.3rem;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  border: none;
+}
+
+#contact {
+  margin: 7.8rem 4rem;
+  height: 56.5rem;
+  margin-bottom: -7.7rem;
+}
+
+#contact .input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#contact .input-wrapper img {
+  margin-left: 1.4rem;
+
+  width: 2.4rem;
+  height: 2.4rem; 
+  position: absolute;
+}
+
+#contact .input-wrapper input {
+  width: 348px;
+  padding: 1.2rem 1.6rem 1.2rem 1.4rem;
+  align-items: center;
+  background: var(--backgroud-color-page);
+  outline: 0;
+}
+
+#contact .input-wrapper input::placeholder{
+  padding: 3rem; 
+}
+
+#contact .input-wrapper textarea {
+  width: 34.8rem;
+  height: 12.6rem;
+  margin-bottom: 2.4rem;
+  background: var(--backgroud-color-page);
+  outline: 0;
+}
+
+#contact .input-wrapper textarea::placeholder {
+  padding: 1.6rem;
+}
+
+#contact .stars {
+  display: none;
+}
+
+/* Button */
+
+.button {
+  text-transform: capitalize;
+
+  color: #F9F4FB;;
+  background: var(--backgroud-color-cards);
+  
+  width: auto;
+  height: 4.5rem;
+  padding: 1.3rem 1.6rem;
+  border-radius: 1.6rem;
+}
+
+/* Footer */
+
+footer {
+  background: var(--backgroud-color-cards);
+  
+  width: auto;
+  height: 7.8rem;
+}
+
+footer p {
+  font-size: 1.9rem;
+  color: var(--color-base-white);
+  text-align: center;
+  padding: 2.3rem 1.6rem;
+}
+
+
+@media(min-width: 1440px) {
+  body {
+    max-width: fit-content;
+  }
+
+  #hero {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10rem;
+   
+  }
+
+  #hero .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 25rem;
+  }
+
+  #hero .hero-text h1 {
+    font-size: 5.8rem;
+    line-height: 7.4rem;
+    margin-bottom: .8rem;
+  }
+
+  #hero .hero-text p {
+    font-size: 3.2rem;
+    line-height: 4rem;
+    margin-bottom: 17.9rem;
+  }
+
+  #hero .hero-text .button-down {
+    margin: 0;
+  }  
+
+  #cards {
+    grid-template-columns: repeat(3,1fr);
+    gap: 6rem;
+    padding: 6.4rem 11.1rem 8rem;
+  }
+  
+  #cards .card {
+    padding: 3.2rem 1.3rem 3.2rem 3.2rem;
+    border-radius: 2.4rem;
+  }
+
+  #cards .card h3 {
+    font-size: 3.5rem;
+    margin-top: 4rem;
+    margin-bottom: 2.4rem;
+  }
+
+  #cards .card p {
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+
+  #contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  #contact form {
+    padding-left: 10.9rem;
+  }
+
+  #contact form .input-wrapper input, #contact .input-wrapper textarea  {
+    width: 59.2rem;
+  }
+  
+  #contact .stars {
+    display: block;
+  }
+
+  #contact .stars img {
+    height: 54.5rem;
+  }
+  
+}
+
+
+
